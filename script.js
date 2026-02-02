@@ -13,20 +13,27 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
-// Firmware download logic
+// =============================
+// Firmware Download Logic
+// =============================
+
 const firmwareSelect = document.getElementById("firmwareSelect");
 const downloadBtn = document.getElementById("downloadBtn");
 
-// 🔥 CHANGE THIS TO YOUR REAL GITHUB LINK
+// Direct GitHub Release links (latest version auto)
 const firmwareLinks = {
-  no: "https://github.com/yourusername/yourrepo/releases/latest/download/JUNO_NO.exe",
-  nc: "https://github.com/yourusername/yourrepo/releases/latest/download/JUNO_NC.exe"
+  no: "https://github.com/gamerclash244/JUNO/releases/latest/download/JUNO.1%20Firmware%20NO%20%20Updater%20Setup%201.0.0.exe",
+  nc: "https://github.com/gamerclash244/JUNO/releases/latest/download/JUNO.1%20Firmware%20NC%20Updater%20Setup%201.0.0.exe"
 };
 
+// Update button link based on selection
 function updateDownload() {
-  const version = firmwareSelect.value;
-  downloadBtn.href = firmwareLinks[version];
+  const selectedVersion = firmwareSelect.value;
+  downloadBtn.href = firmwareLinks[selectedVersion];
 }
 
+// Set default link on page load
 updateDownload();
+
+// Update when dropdown changes
 firmwareSelect.addEventListener("change", updateDownload);
