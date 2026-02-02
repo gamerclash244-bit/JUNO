@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firmware Download</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <a href="#">Home</a>
+    <a href="#">Firmware</a>
+    <a href="#">Documentation</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <div class="hamburger" id="menuBtn">☰</div>
+    <div class="logo">PTB</div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>JUNO.1 Firmware Update</h1>
+      <p>
+        Download the latest firmware to enhance performance,
+        stability, and features.
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-box">
+          <h3>Firmware Version</h3>
+          <select id="firmwareSelect" class="version-select">
+            <option value="no">v1.0.0 – Normally Open</option>
+            <option value="nc">v1.0.0 – Normally Closed</option>
+          </select>
+        </div>
+
+        <div class="info-box">
+          <h3>Release Date</h3>
+          <p>Jan 2026</p>
+        </div>
+
+        <div class="info-box">
+          <h3>Compatibility</h3>
+          <p>JUNO.1 only for windows</p>
+        </div>
+
+      </div>
+
+      <a href="#" class="download-btn" id="downloadBtn">
+        Download Firmware
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 PTB ELECTRONICS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
